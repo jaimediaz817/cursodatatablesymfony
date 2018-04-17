@@ -1,0 +1,17 @@
+	{
+		"export":"doctrine2-annotation",
+		"params":{
+			"backupExistingFile": true,
+			"skipPluralNameCheking": false,
+			"enhanceManyToManyDetection":true,
+			"bundleNamespace": "AppBundle",
+			"entityNameSpace": "",
+			"repositoryNamespace": "",
+			"useAnnotationPrefix": "ORM\\",
+			"useAutomaticRepository":true,
+			"indentation": 4,
+			"filename": "%entity%.%extension%",
+			"quoteIdentifier": false
+
+		}
+	}
