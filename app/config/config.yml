@@ -30,6 +30,9 @@ framework:
     assets: ~
     php_errors:
         log: true
+    # TODO: add
+    templating:
+        engines: ['twig']
 
 # Twig Configuration
 twig:
@@ -65,3 +68,15 @@ swiftmailer:
     username: '%mailer_user%'
     password: '%mailer_password%'
     spool: { type: memory }
+
+assetic:
+    debug: '%kernel.debug%'
+    use_controller: '%kernel.debug%'
+    node: /usr/bin/nodejs
+    filters:
+        cssrewrite: ~
+        uglifyjs2:
+            # the path to the Uglify executable
+            bin: /usr/bin/uglifyjs
+        uglifycss:
+            bin: /usr/bin/uglifycss
