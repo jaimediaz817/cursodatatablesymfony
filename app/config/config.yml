@@ -72,11 +72,33 @@ swiftmailer:
 assetic:
     debug: '%kernel.debug%'
     use_controller: '%kernel.debug%'
+
+    # TODO: organizando el orden de las paths
+    #node: %node_bin_path%
+    #node_paths: %node_lib_paths%
+
+    # TODO descomentado
     node: /usr/bin/nodejs
+
+    # TODO: SE COMENTA ESTO
+    #bundles:        [ 'AppBundle' ]
+    #bundles: []
+
     filters:
         cssrewrite: ~
         uglifyjs2:
             # the path to the Uglify executable
+            # TODO: COMENTADO DE MOEMNTO:
+            #bin: /usr/local/bin/uglifyjs
+
+            # TODO: habilitado de momento:
             bin: /usr/bin/uglifyjs
+
+            # TODO: (-)
+            #bin: %kernel.root_dir%/../Resources/assets/js/
         uglifycss:
+            # TODO: DESCOMENTADO DE MOMENTO:
             bin: /usr/bin/uglifycss
+
+            # TODO: add: (-)
+            #bin: %kernel.root_dir%/../node_modules/.bin/uglifycss
