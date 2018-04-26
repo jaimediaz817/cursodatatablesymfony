@@ -9,7 +9,6 @@ if (PHP_VERSION_ID < 70000) {
 
 // TODO: refactor AMBIENTE
 $kernel = new AppKernel('prod', false);
-$kernel = new AppKernel('dev', true);
 
 if (PHP_VERSION_ID < 70000) {
     $kernel->loadClassCache();

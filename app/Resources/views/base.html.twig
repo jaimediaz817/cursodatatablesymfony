@@ -7,7 +7,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Starter</title>
+  <title>{% block title %}Welcome Jdiaz!{% endblock %}</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
@@ -333,6 +333,9 @@ desired effect
       <!--------------------------
         | Your Page Content Here |
         -------------------------->
+        {% block body %}
+        CONTENIDO BASE /
+        {% endblock %}
 
     </section>
     <!-- /.content -->
@@ -453,10 +456,11 @@ desired effect
     '@AppBundle/Resources/public/lib/bootstrap/dist/js/bootstrap.min.js'
     '@AppBundle/Resources/public/lib/admin-lte/dist/js/adminlte.min.js'
     '@AppBundle/Resources/public/js/*'
-
     filter='uglifyjs2' output='js/index.js' %}
     <script src="{{ asset_url }}"></script>
 {% endjavascripts %}
+<!-- '@AppBundle/Resources/public/js/*' -->
+
 
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the
