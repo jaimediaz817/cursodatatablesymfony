@@ -10,6 +10,16 @@ if (PHP_VERSION_ID < 70000) {
 // TODO: refactor AMBIENTE
 $kernel = new AppKernel('prod', false);
 
+/*
+Ok...por  eso era que no te mostraba nunca los assets de producciòn
+por siempre estabas en desarrollo :)
+
+jajaja carlos , entonces esta en true, y el otro fichero app_dev.php en false?
+soo es retirarla
+para usar el entorno de desarrollo lo haces de la siguiente manera
+$kernel = new AppKernel('dev', true);
+*/
+
 if (PHP_VERSION_ID < 70000) {
     $kernel->loadClassCache();
 }
